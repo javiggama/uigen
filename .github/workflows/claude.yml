@@ -24,11 +24,22 @@ jobs:
       issues: read
       id-token: write
       actions: read # Required for Claude to read CI results on PRs
+
+    env:
+      CLAUDE_CUSTOM_INSTRUCTIONS: |
+        This is a Next.js project using TypeScript.
+        Avoid using console.log in production code.
+        Follow clean and maintainable coding practices.
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Install dependencies
+        run: npm install  
+      
 
       - name: Run Claude Code
         id: claude
