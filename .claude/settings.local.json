@@ -4,7 +4,8 @@
       "Bash(npm audit:*)",
       "Bash(npm run:*)",
       "Bash(npx vitest:*)",
-      "mcp__playwright__*"
+      "mcp__playwright__*",
+      "Bash(git:*)"
     ]
   }
 }
