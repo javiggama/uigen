@@ -27,9 +27,23 @@ jobs:
 
     env:
       CLAUDE_CUSTOM_INSTRUCTIONS: |
-        This is a Next.js project using TypeScript.
-        Avoid using console.log in production code.
-        Follow clean and maintainable coding practices.
+        This is a Next.js project using TypeScript and modern React patterns.
+
+        Guidelines:
+        - Avoid console.log in production code
+        - Use clean, modular, and maintainable code
+        - Follow best practices for React and Next.js (hooks, server/client components)
+        - Prefer TypeScript types over any
+        - Keep components small and reusable
+        - Use meaningful variable and function names
+
+        Code review rules:
+        - Point out bad practices clearly
+        - Suggest improvements with examples
+        - Be concise but precise
+        - Act as a senior engineer reviewing the code
+        
+        
 
     steps:
       - name: Checkout repository
