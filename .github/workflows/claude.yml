@@ -43,6 +43,21 @@ jobs:
         - Be concise but precise
         - Act as a senior engineer reviewing the code
         
+      mcp_config: |
+        {
+          "mcpServers": {
+            "playwright": {
+              "command": "npx",
+              "args": [
+                "@playwright/mcp@latest",
+                "--allowed-origins",
+                "localhost:3000;cdn.tailwindcss.com;esm.sh"
+              ] 
+            }
+          }
+        }
+    allowed_tools: "BashBash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."      
+                
         
 
     steps:
